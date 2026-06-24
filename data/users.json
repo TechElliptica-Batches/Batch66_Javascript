@@ -1,0 +1,128 @@
+[
+  {
+    "scenario": "verify error message for invalid username and invalid password",
+    "username": "invaliduser",
+    "password": "invalidpassword",
+    "errorMsg": "Epic sadface: Username and password do not match any user in this service"
+  },
+  {
+    "scenario": "verify error message for valid username and invalid password",
+    "username": "standard_user",
+    "password": "invalidpassword",
+    "errorMsg": "Epic sadface: Username and password do not match any user in this service"
+  },
+  {
+    "scenario": "verify error message for invalid username and valid password",
+    "username": "invaliduser",
+    "password": "secret_sauce",
+    "errorMsg": "Epic sadface: Username and password do not match any user in this service"
+  },
+  {
+    "scenario": "verify error message for empty username and valid password",
+    "username": "",
+    "password": "secret_sauce",
+    "errorMsg": "Epic sadface: Username is required"
+  },
+  {
+    "scenario": "verify error message for valid username and empty password",
+    "username": "standard_user",
+    "password": "",
+    "errorMsg": "Epic sadface: Password is required"
+  },
+  {
+    "scenario": "verify error message for empty username and invalid password",
+    "username": "",
+    "password": "invalidpassword",
+    "errorMsg": "Epic sadface: Username is required"
+  },
+  {
+    "scenario": "verify error message for invalid username and empty password",
+    "username": "invaliduser",
+    "password": "",
+    "errorMsg": "Epic sadface: Password is required"
+  },
+  {
+    "scenario": "verify error message for empty username and empty password",
+    "username": "",
+    "password": "",
+    "errorMsg": "Epic sadface: Username is required"
+  },
+  {
+    "scenario": "verify login with username having leading spaces",
+    "username": " standard_user",
+    "password": "secret_sauce",
+    "errorMsg": "Epic sadface: Username and password do not match any user in this service"
+  },
+  {
+    "scenario": "verify login with username having trailing spaces",
+    "username": "standard_user ",
+    "password": "secret_sauce",
+    "errorMsg": "Epic sadface: Username and password do not match any user in this service"
+  },
+  {
+    "scenario": "verify login with password having leading spaces",
+    "username": "standard_user",
+    "password": " secret_sauce",
+    "errorMsg": "Epic sadface: Username and password do not match any user in this service"
+  },
+  {
+    "scenario": "verify login with password having trailing spaces",
+    "username": "standard_user",
+    "password": "secret_sauce ",
+    "errorMsg": "Epic sadface: Username and password do not match any user in this service"
+  },
+  {
+    "scenario": "verify login with uppercase username",
+    "username": "STANDARD_USER",
+    "password": "secret_sauce",
+    "errorMsg": "Epic sadface: Username and password do not match any user in this service"
+  },
+  {
+    "scenario": "verify login with uppercase password",
+    "username": "standard_user",
+    "password": "SECRET_SAUCE",
+    "errorMsg": "Epic sadface: Username and password do not match any user in this service"
+  },
+  {
+    "scenario": "verify login with special characters in username",
+    "username": "@#$%^&*",
+    "password": "secret_sauce",
+    "errorMsg": "Epic sadface: Username and password do not match any user in this service"
+  },
+  {
+    "scenario": "verify login with SQL injection in username",
+    "username": "' OR '1'='1",
+    "password": "secret_sauce",
+    "errorMsg": "Epic sadface: Username and password do not match any user in this service"
+  },
+  {
+    "scenario": "verify login with SQL injection in password",
+    "username": "standard_user",
+    "password": "' OR '1'='1",
+    "errorMsg": "Epic sadface: Username and password do not match any user in this service"
+  },
+  {
+    "scenario": "verify login with very long username",
+    "username": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "password": "secret_sauce",
+    "errorMsg": "Epic sadface: Username and password do not match any user in this service"
+  },
+  {
+    "scenario": "verify login with very long password",
+    "username": "standard_user",
+    "password": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "errorMsg": "Epic sadface: Username and password do not match any user in this service"
+  },
+  {
+    "scenario": "verify login with numeric username",
+    "username": "123456",
+    "password": "secret_sauce",
+    "errorMsg": "Epic sadface: Username and password do not match any user in this service"
+  },
+  {
+    "scenario": "verify login with numeric password",
+    "username": "standard_user",
+    "password": "123456",
+    "errorMsg": "Epic sadface: Username and password do not match any user in this service"
+  }
+]
