@@ -3,7 +3,7 @@ import { ButtonPage } from "../pageobject/Button.js";
 let page1;
 
 test.beforeAll("", async() => {
-    let browser = await chromium.launch({headless: false});
+    let browser = await chromium.launch({headless: true});
     let context1 = await browser.newContext();
     page1 = await context1.newPage();
     await page1.goto("file:///Users/vaibhavsingh/Desktop/teche-apps/automation-practice-master/app/index.html");
